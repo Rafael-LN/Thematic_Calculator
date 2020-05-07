@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mercedes_vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/title"
+        android:textColor="@color/ic_mercedes_background"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/mercedesButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/black"
+        android:contentDescription="@string/mercedes"
+        android:onClick="setMercedes"
+        app:layout_constraintEnd_toStartOf="@+id/ferrariButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle"
+        app:srcCompat="@mipmap/ic_mercedes_foreground"
+        tools:srcCompat="@mipmap/ic_mercedes_foreground" />
+
+    <ImageButton
+        android:id="@+id/ferrariButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/ferrari"
+        android:onClick="setFerrari"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle"
+        app:srcCompat="@mipmap/ic_ferrari_foreground" />
+
+    <ImageButton
+        android:id="@+id/redBullButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/red_bull"
+        android:onClick="setRedBull"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ferrariButton"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle"
+        app:srcCompat="@mipmap/ic_red_bull_foreground" />
+
+    <TextView
+        android:id="@+id/operand1"
+        android:layout_width="@dimen/textWidth"
+        android:layout_height="@dimen/textHeight"
+        android:layout_marginBottom="200dp"
+        android:alpha=".7"
+        android:background="@android:color/background_light"
+        android:text="@string/operand_1"
+        android:textColor="@color/ic_mercedes_background"
+        android:textSize="@dimen/textSize"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/mercedesButton"
+        app:layout_constraintRight_toRightOf="@id/redBullButton" />
+
+    <EditText
+        android:id="@+id/edit_text1"
+        android:layout_width="@dimen/textWidth"
+        android:layout_height="@dimen/textHeight"
+        android:alpha=".7"
+        android:background="@color/ic_mercedes_background"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:text="0"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/textSize"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/operand1"
+        app:layout_constraintTop_toBottomOf="@id/operand1" />
+
+    <TextView
+        android:id="@+id/operand2"
+        android:layout_width="@dimen/textWidth"
+        android:layout_height="@dimen/textHeight"
+        android:alpha=".7"
+        android:background="@android:color/background_light"
+        android:text="@string/operand_2"
+        android:textColor="@color/ic_mercedes_background"
+        android:textSize="@dimen/textSize"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/edit_text1"
+        app:layout_constraintTop_toBottomOf="@id/edit_text1" />
+
+    <EditText
+        android:id="@+id/edit_text2"
+        android:layout_width="@dimen/textWidth"
+        android:layout_height="@dimen/textHeight"
+        android:alpha=".7"
+        android:background="@color/ic_mercedes_background"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:text="0"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/textSize"
+        android:textStyle="normal"
+        app:layout_constraintLeft_toLeftOf="@id/operand2"
+        app:layout_constraintTop_toBottomOf="@id/operand2" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="@dimen/opButtonSize"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0.7"
+        android:onClick="addition"
+        android:text="@string/addition"
+        android:textColor="@color/ic_mercedes_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/edit_text2"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text2" />
+
+    <Button
+        android:id="@+id/buttonSub"
+        android:layout_width="@dimen/opButtonSize"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0.7"
+        android:onClick="subtraction"
+        android:text="@string/subtraction"
+        android:textColor="@color/ic_mercedes_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/buttonAdd"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text2" />
+
+    <Button
+        android:id="@+id/buttonMult"
+        android:layout_width="@dimen/opButtonSize"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0.7"
+        android:onClick="multiplication"
+        android:text="@string/multiplication"
+        android:textColor="@color/ic_mercedes_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toLeftOf="@id/buttonDiv"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text2" />
+
+    <Button
+        android:id="@+id/buttonDiv"
+        android:layout_width="@dimen/opButtonSize"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alpha="0.7"
+        android:onClick="division"
+        android:text="@string/division"
+        android:textColor="@color/ic_mercedes_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/edit_text2"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text2" />
+
+    <Button
+        android:id="@+id/buttonExp"
+        android:layout_width="@dimen/opButtonSize"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:onClick="exponential"
+        android:text="@string/exponential"
+        android:textColor="@color/ic_mercedes_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/buttonAdd"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
+
+    <Button
+        android:id="@+id/buttonSqrt"
+        android:layout_width="@dimen/opButtonSize"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:onClick="squareRoot"
+        android:text="@string/square_root"
+        android:textColor="@color/ic_mercedes_background"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/buttonSub"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSub" />
+
+    <Button
+        android:id="@+id/setMem"
+        android:layout_width="@dimen/opButtonSize"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:onClick="setMem"
+        android:text="@string/setMem"
+        android:textColor="@color/ic_mercedes_background"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/buttonMult"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMult" />
+
+    <Button
+        android:id="@+id/getMem"
+        android:layout_width="@dimen/opButtonSize"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:onClick="getMem"
+        android:text="@string/getMem"
+        android:textColor="@color/ic_mercedes_background"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/buttonDiv"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

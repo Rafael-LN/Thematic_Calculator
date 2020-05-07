@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Thematic Calculator</string>
+    <string name="title">Select your team</string>
+    <string name="mercedes" translatable="false">Mercedes</string>
+    <string name="ferrari" translatable="false">Ferrari</string>
+    <string name="red_bull" translatable="false">Red Bull</string>
+    <string name="operand_1">Operand 1, (And Result)</string>
+    <string name="operand_2">Operand 2</string>
+    <string name="addition" translatable="false">+</string>
+    <string name="subtraction" translatable="false">-</string>
+    <string name="multiplication" translatable="false">*</string>
+    <string name="division" translatable="false">/</string>
+    <string name="exponential" translatable="false">exp</string>
+    <string name="square_root" translatable="false">√</string>
+    <string name="editTextDefaultValue">0</string>
+    <string name="setMem">Set Mem</string>
+    <string name="getMem">Get Mem</string>
+</resources>

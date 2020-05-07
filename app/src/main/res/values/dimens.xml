@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textWidth">280dp</dimen>
+    <dimen name="textHeight">24dp</dimen>
+    <dimen name="textSize">18sp</dimen>
+    <dimen name="opButtonSize">70dp</dimen>
+    <dimen name="landWidth">90dp</dimen>
+    <dimen name="landHeight">90dp</dimen>
+    <dimen name="landTextWidth">760dp</dimen>
+    <dimen name="landTextHeight">40dp</dimen>
+    <dimen name="landTextSize">30sp</dimen>
+</resources>

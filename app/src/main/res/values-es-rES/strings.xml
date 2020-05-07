@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculadora temática</string>
+    <string name="title">Selecciona tu equipo</string>
+    <string name="operand_1">Operando 1, (y resultado)</string>
+    <string name="operand_2">Operando 2</string>
+</resources>
